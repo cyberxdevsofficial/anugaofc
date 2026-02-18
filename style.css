@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.hamburger {
+  width: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.about, .projects, .contact {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 15px;
+}
+
+.projects .project-card {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.project-preview {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.7);
+  margin-top: 50px;
+}
+
+/* Responsive Hamburger Menu */
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 0 10px;
+  }
+  nav a {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .hamburger {
+    display: block;
+  }
+}
