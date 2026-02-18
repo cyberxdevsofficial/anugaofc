@@ -1,0 +1,147 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top,#0f2027,#203a43,#2c5364);
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome{
+    font-size:42px;
+    color:white;
+    font-family:'Playfair Display',serif;
+    text-align:center;
+    margin-top:20vh;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.chat {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.msg{
+    padding: 14px 18px;
+    border-radius: 12px;
+    max-width: 75%;
+    animation: slide .3s ease;
+}
+
+.user{
+    background: #00c6ff;
+    color: black;
+    margin-left:auto;
+}
+
+.ai{
+    background: rgba(255,255,255,.1);
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Input area */
+.input-area{
+    display:flex;
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:10px;
+}
+
+input{
+    flex:1;
+    padding:12px 15px;
+    border:none;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    border-radius:8px;
+    font-size:16px;
+}
+
+#sendBtn{
+    background:#000;
+    border:none;
+    margin-left:8px;
+    padding:0 14px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+}
+
+#sendBtn img{
+    width:22px; height:22px;
+}
+
+#sendBtn:hover{
+    background:#222;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:8px 0;
+    font-size:12px;
+    color:rgba(255,255,255,0.7);
+    background:rgba(0,0,0,0.35);
+}
+
+.brand{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    color:#fff;
+}
+
+/* Code blocks with copy button */
+pre{
+    background: rgba(0,0,0,0.2);
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top:6px;
+}
+
+.copy-btn{
+    position: absolute;
+    top:4px;
+    right:4px;
+    background:#000;
+    color:#fff;
+    border:none;
+    padding:2px 8px;
+    font-size:12px;
+    border-radius:4px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.copy-btn:hover{
+    background:#222;
+}
+
+/* Animations */
+@keyframes slide{
+    from{transform:translateY(10px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .msg{max-width:85%;}
+    input{font-size:14px;}
+}
+
+@media(max-width:480px){
+    .msg{max-width:90%;}
+    input{font-size:13px;}
+    .welcome{font-size:28px;}
+}
